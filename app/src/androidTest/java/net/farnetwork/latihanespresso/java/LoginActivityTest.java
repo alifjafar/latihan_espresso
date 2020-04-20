@@ -1,10 +1,14 @@
-package net.farnetwork.latihanespresso;
+package net.farnetwork.latihanespresso.java;
 
 import android.app.Activity;
 import android.content.res.Resources;
 
+import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
+
+import net.farnetwork.latihanespresso.R;
+import net.farnetwork.latihanespresso.java.LoginActivity;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -33,14 +37,14 @@ public class LoginActivityTest {
     private Activity activity;
 
     @Rule
-    public ActivityTestRule mActivityRule = new ActivityTestRule<>(LoginActivity.class);
+    public ActivityTestRule activityRule = new ActivityTestRule<>(LoginActivity.class);
 
     @Before
     public void initTest() {
         wrongUsername = "pengguna";
         username = "user";
         password = "password";
-        activity = mActivityRule.getActivity();
+        activity = activityRule.getActivity();
         res = activity.getResources();
     }
 
@@ -50,7 +54,7 @@ public class LoginActivityTest {
      */
     @Test
     public void loginWithEmptyUsernamePassword() {
-        onView(withId(R.id.textUsername)).perform(typeText(""));
+        onView(ViewMatchers.withId(R.id.textUsername)).perform(typeText(""));
         onView(withId(R.id.textPassword)).perform(typeText(""));
 
         onView(withId(R.id.btnLogin)).perform(click());

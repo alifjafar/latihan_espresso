@@ -1,4 +1,4 @@
-package net.farnetwork.latihanespresso;
+package net.farnetwork.latihanespresso.java;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import net.farnetwork.latihanespresso.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -33,8 +35,7 @@ public class LoginActivity extends AppCompatActivity {
             String username = textUsername.getText().toString();
             String password = textPassword.getText().toString();
 
-            if (!validateLogin(username, password))
-                return;
+            if (!validateLogin(username, password)) return;
 
             doLogin(username, password);
         });
