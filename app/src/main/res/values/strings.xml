@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LatihanEspresso</string>
+    <string name="label_login">Silahkan Login</string>
+    <string name="hintUsername">Masukan Username</string>
+    <string name="hintPassword">Masukan Password</string>
+    <string name="textBtnLogin">Login</string>
+    <string name="wrongUsernamePassword"><![CDATA[Username & Password Salah]]></string>
+    <string name="emptyUsername">Username tidak boleh kosong</string>
+    <string name="emptyPassword">Password tidak boleh kosong</string>
+    <string name="welcomeMessage">Selamat datang %1$s!</string>
+</resources>
